@@ -18,8 +18,19 @@ body {
     overflow-x: hidden;
 }
 
+.section-heading {
+    font-size: 10rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #999;
+    text-align: center;
+    opacity: .3;
+    text-shadow: 2rem 2rem 4rem #777;
+}
+
+
 /* SECTION 1 */
-section-1 {
+.section-1 {
     width: 100%;
     height: 100vh;
     background-color: #fff;
@@ -47,6 +58,16 @@ section-1 {
     top: 0;
     left: 0;
     border-radius: 40%;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
 }
 
 .navbar {
@@ -100,12 +121,78 @@ section-1 {
     text-shadow: .1rem .1rem .2rem #ddd, -.1rem -.1rem .2rem #ddd;
 }
 
-@keyframes rotate {
-    0% {
-        transform: rotate(0)
-    }
 
-    100% {
-        transform: rotate(360deg)
-    }
+/* SECTION 2 */
+.section-2 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.customers-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70%
+}
+
+.customer {
+    width: 35rem;
+    height: 50rem;
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 1rem 1rem 2rem #ddd, -.5rem -.5rem 1rem #eee;
+    transition: all .5s
+}
+
+.customer:hover {
+    box-shadow: 2rem 2rem 3rem #ddd, -.5rem -.5rem 1rem #eee;
+    transition: box-shadow .5s;
+}
+
+.customer:first-child {
+    align-self: flex-end;
+}
+
+.customer:last-child {
+    align-self: flex-start;
+}
+
+.fa-quote-left {
+    font-size: 4rem;
+    color: #f08e0f
+}
+
+.customer-text {
+    font-size: 2rem;
+    margin: 2.5rem 0;
+    text-align: justify;
+}
+
+.customer-text::first-letter {
+    margin-left: 4rem
+}
+
+.customer-rating {
+    font-size: 2rem;
+    color:#f08e0f;
+}
+
+.customer-img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    margin: 2rem 0;
+    border-radius: 50%;
+}
+
+.customer-name {
+    font-size: 2rem;
+    font-weight: 700;
 }
