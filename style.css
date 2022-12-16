@@ -212,7 +212,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 70%;
+    height: 75%;
 }
 
 .team-member {
@@ -224,6 +224,20 @@ body {
     flex-direction: column;
     align-items: center;
     position: relative;
+    opacity: .7;
+    transition: opacity .5s;
+}
+
+.team-member:hover {
+    opacity: 1;
+}
+
+.team-member:first-child {
+    align-self: flex-start;
+}
+
+.team-member:last-child {
+    align-self: flex-end;
 }
 
 .team-member-img {
@@ -275,6 +289,11 @@ body {
     padding: 0.5rem;
     cursor: pointer;
     z-index: 50;
+    transition: transform .5s;
+}
+
+.change.story-btn {
+    transform: rotate(405deg);
 }
 
 .story-btn-line {
@@ -282,7 +301,6 @@ body {
     height: .1rem;
     background-color: #fff;
 }
-
 
 .story {
     width: 100%;
@@ -296,7 +314,15 @@ body {
     justify-content: center;
     flex-direction: column;
     padding: 2rem;  
-    transform: scale(0) 
+    transform: scale(0); 
+    transform-origin: top right;
+    transition: all .5s;
+    border-radius: 50rem 0 50rem 50rem;
+}
+
+.change.story {
+    transform: scale(1);
+    border-radius: 0;
 }
 
 .story-heading {
@@ -312,7 +338,6 @@ body {
     color: #eee;
     letter-spacing: .1rem;
     text-indent: 2rem;
-
 }
 
 
