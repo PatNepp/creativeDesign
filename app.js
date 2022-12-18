@@ -1,4 +1,9 @@
 const storyBtn = document.querySelectorAll('.story-btn')
+const formBtn = document.querySelector('.form-button')
+const formText = document.querySelector('.form-text')
+const formName = document.querySelector('.form-name')
+const formEmail = document.querySelector('.form-email')
+const form = document.querySelector('.contact-form')
 
 storyBtn.forEach((btn) => {
     btn.addEventListener('click', () => {
@@ -6,3 +11,11 @@ storyBtn.forEach((btn) => {
         btn.nextElementSibling.classList.toggle('change')
     })
 })
+
+formBtn.addEventListener('click', (e) => {
+    const formChildren = [formText, formName, formEmail]
+    formChildren.forEach((child) => {
+        child.value = ''
+    })
+})
+

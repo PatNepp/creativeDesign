@@ -403,17 +403,27 @@ html {
     min-width: 70%;
 }
 
-.contact-form input[type='submit'] {
+.contact-form button {
     background-color: rgba(50, 231, 255, .7);
     color: #fff;
+    border: none;
+    border-radius: 1rem;
+    padding: .5rem 0;
     font-weight: bolder;
     letter-spacing: .5rem;
     cursor: pointer;
     transition: background-color .5s
 }
 
-.contact-form input[type='submit']:hover {
+.contact-form button:hover {
     background-color: rgba(50, 231, 255);
+}
+
+.copyright {
+    font-size: 1rem;
+    letter-spacing: .2rem;
+    color: #444;
+    margin-top: 5rem;
 }
 
 
