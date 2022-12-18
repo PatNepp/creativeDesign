@@ -12,6 +12,7 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -27,6 +28,27 @@ html {
     text-align: center;
     opacity: .3;
     text-shadow: 2rem 2rem 4rem #777;
+}
+
+
+.scroll-up-btn {
+    width: 5rem;
+    height: 5rem;
+    background-color: rgba(50, 231, 255, .8);
+    position: fixed;
+    bottom: 5rem;
+    right: 5rem;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: display .5s ease-in-out
+}
+
+.scroll-up-btn:hover {
+    background-color: rgba(50, 231, 255, .4);
 }
 
 

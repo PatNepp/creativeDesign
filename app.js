@@ -4,6 +4,7 @@ const formText = document.querySelector('.form-text')
 const formName = document.querySelector('.form-name')
 const formEmail = document.querySelector('.form-email')
 const form = document.querySelector('.contact-form')
+const scrollBtn = document.querySelector('.scroll-up-btn')
 
 storyBtn.forEach((btn) => {
     btn.addEventListener('click', () => {
@@ -17,5 +18,9 @@ formBtn.addEventListener('click', (e) => {
     formChildren.forEach((child) => {
         child.value = ''
     })
+})
+
+window.addEventListener('scroll', e => {
+    scrollBtn.style.display = window.scrollY > 500 ? 'flex' : 'none'
 })
 
